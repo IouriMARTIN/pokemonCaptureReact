@@ -37,12 +37,12 @@ body {
 }
 
 .app.dark {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background:#000032;
   color: #fff;
 }
 
 .app:not(.dark) {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f72323;
   color: #333;
 }
 
