@@ -7,15 +7,9 @@ interface TeamCardProps {
   onToggleFavorite: () => void;
 }
 
-const TeamCard = ({ pokemon, onToggleFavorite }: TeamCardProps) => {
+const TeamCard = ({ pokemon }: TeamCardProps) => {
   return (
     <div className={`team-card ${pokemon.isShiny ? 'shiny' : ''}`}>
-      <button 
-        className={`favorite-btn ${pokemon.isFavorite ? 'active' : ''}`}
-        onClick={onToggleFavorite}
-      >
-        <Heart size={16} fill={pokemon.isFavorite ? 'currentColor' : 'none'} />
-      </button>
       {pokemon.isShiny && (
         <div style={{ position: 'absolute', top: 5, left: 5 }}>
           <Sparkles size={20} color="#FFD700" />

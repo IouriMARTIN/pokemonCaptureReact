@@ -14,7 +14,7 @@ const TeamSection = ({ capturedPokemon, onToggleFavorite }: TeamSectionProps) =>
       
       {capturedPokemon.length === 0 ? (
         <p style={{ textAlign: 'center', opacity: 0.7 }}>
-          Aucun Pokémon capturé pour le moment...
+          0 Pokémons
         </p>
       ) : (
         <div className="team-grid">

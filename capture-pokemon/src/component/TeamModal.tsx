@@ -28,7 +28,6 @@ const TeamModal = ({ currentPokemon, capturedPokemon, onRelease, onClose }: Team
                 <div className="modal-pokemon-name">
                   {pokemon.name}
                   {pokemon.isShiny && ' ✨'}
-                  {pokemon.isFavorite && ' ❤️'}
                 </div>
               </div>
               <button 

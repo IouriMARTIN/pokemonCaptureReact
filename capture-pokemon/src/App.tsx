@@ -1,4 +1,3 @@
-// src/App.tsx
 import { useState, useEffect } from 'react';
 import Header from './component/Header';
 import Controls from './component/Controls';
@@ -81,7 +80,7 @@ const App = () => {
             capturedAt: Date.now()
           };
           setCapturedPokemon([...capturedPokemon, newPokemon]);
-          setMessage(`🎉 ${currentPokemon.name.toUpperCase()} capturé ! 🎉`);
+          setMessage(` ${currentPokemon.name.toUpperCase()} capturé !`);
           setCurrentPokemon(null);
         }
       } else if (newAttempts >= 3) {
@@ -92,17 +91,6 @@ const App = () => {
       }
       setCapturing(false);
     }, 1000);
-  };
-
-  const fleePokemon = () => {
-    setMessage('Vous avez fui le combat...');
-    setTimeout(() => encounterPokemon(), 1000);
-  };
-
-  const toggleFavorite = (index: number) => {
-    const updated = [...capturedPokemon];
-    updated[index].isFavorite = !updated[index].isFavorite;
-    setCapturedPokemon(updated);
   };
 
   const releasePokemon = (index: number) => {
@@ -135,13 +123,11 @@ const App = () => {
             attempts={attempts}
             capturing={capturing}
             onThrowPokeball={throwPokeball}
-            onFlee={fleePokemon}
             onNewEncounter={encounterPokemon}
           />
 
           <TeamSection
             capturedPokemon={capturedPokemon}
-            onToggleFavorite={toggleFavorite}
           />
         </div>
       </div>

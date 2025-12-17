@@ -24,7 +24,6 @@ const EncounterSection = ({
   attempts,
   capturing,
   onThrowPokeball,
-  onFlee,
   onNewEncounter
 }: EncounterSectionProps) => {
   return (
@@ -59,14 +58,7 @@ const EncounterSection = ({
               onClick={onThrowPokeball}
               disabled={attempts >= 3 || capturing}
             >
-              🎯 Lancer Pokéball
-            </button>
-            <button 
-              className="btn btn-secondary"
-              onClick={onFlee}
-              disabled={capturing}
-            >
-              💨 Fuir
+              Pokéball
             </button>
           </div>
         </>
@@ -76,7 +68,7 @@ const EncounterSection = ({
             className="btn btn-success"
             onClick={onNewEncounter}
           >
-            🔍 Nouvelle Rencontre
+            Nouvelle rencontre ?
           </button>
         </div>
       )}
